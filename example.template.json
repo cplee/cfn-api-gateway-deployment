@@ -79,7 +79,7 @@
     },
     "DeploymentCustomResourceLambdaName": {
      "Type": "String",
-      "Default": "cfn-api-gateway-deployment-0-1-1",
+      "Default": "cfn-api-gateway-deployment-0-1-2",
       "Description": "The name of the ApiGatewayDeployment Lambda you deployed to test this stack."
     },
     "DeploymentStageName": {
@@ -757,7 +757,7 @@
           [
             "https://",
             {
-              "Ref": "RestApiId"
+              "Ref": "MyRestApi"
             },
             ".execute-api.",
             {

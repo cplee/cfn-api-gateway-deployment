@@ -1,6 +1,6 @@
 {
   "name": "cfn-api-gateway-deployment",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AWS CloudFormation Custom Lambda Resource | API Gateway Deployment",
   "main": "index.js",
   "scripts": {
