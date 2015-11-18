@@ -1,0 +1,37 @@
+{
+  "name": "cfn-api-gateway-deployment",
+  "version": "0.1.1",
+  "dependencies": {
+    "aws4": {
+      "version": "1.1.0",
+      "from": "aws4@1.1.0",
+      "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.1.0.tgz",
+      "dependencies": {
+        "lru-cache": {
+          "version": "2.7.0",
+          "from": "lru-cache@>=2.6.5 <3.0.0",
+          "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.0.tgz"
+        }
+      }
+    },
+    "cfn-lambda": {
+      "version": "0.6.1",
+      "from": "cfn-lambda@0.6.1",
+      "resolved": "https://registry.npmjs.org/cfn-lambda/-/cfn-lambda-0.6.1.tgz",
+      "dependencies": {
+        "jayschema": {
+          "version": "0.3.1",
+          "from": "https://registry.npmjs.org/jayschema/-/jayschema-0.3.1.tgz",
+          "resolved": "https://registry.npmjs.org/jayschema/-/jayschema-0.3.1.tgz",
+          "dependencies": {
+            "when": {
+              "version": "3.4.6",
+              "from": "https://registry.npmjs.org/when/-/when-3.4.6.tgz",
+              "resolved": "https://registry.npmjs.org/when/-/when-3.4.6.tgz"
+            }
+          }
+        }
+      }
+    }
+  }
+}
