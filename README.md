@@ -40,6 +40,8 @@ This Lambda makes use of the Lambda-Backed CloudFormation Custom Resource flow m
 
   *Updating BaseApiId will require and trigger CloudFormation Resource Replacement*
 
+  Deleting this resource may not do what you expect! The Deployment will NOT DELETE if it is still assigned to a Stage, including the Stage it originally created. Updates will work as expected. This limitation is due to a design flaw in AWS API Gateway that does not allow a Stage to be created without a deployment behind it - there is no way to atomically create a headless Stage and detach the Deployment, thus we cannot simply delete a Deployment currently associated with a Stage.
+
 
 #### Example Template Prerequisites
 
