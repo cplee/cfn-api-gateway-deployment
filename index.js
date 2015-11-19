@@ -13,20 +13,29 @@ var signingOptions = {
   sessionToken: credentials.sessionToken
 };
 
-var CfnLambda = require('cfn-lambda');
+var ignorableDeletionErrorMessage = 'Active stages pointing ' +
+  'to this deployment must be moved or deleted';
 
-var Delete = CfnLambda.SDKAlias({
-  api: APIG,
-  method: 'deleteDeployment',
-  physicalIdAs: 'DeploymentId',
-  returnPhysicalId: 'id',
-  downcase: true,
-  keys: [
-    'RestApiId',
-    'DeploymentId'
-  ],
-  ignoreErrorCodes: [404]
-});
+var CfnLambda = require('cfn-lambda');
+function Delete(physcialId, params, reply) {
+  CfnLambda.SDKAlias({
+    api: APIG,
+    method: 'deleteDeployment',
+    physicalIdAs: 'DeploymentId',
+    returnPhysicalId: 'id',
+    downcase: true,
+    keys: [
+      'RestApiId',
+      'DeploymentId'
+    ],
+    ignoreErrorCodes: [404]
+  })(physicalId, params, function(errMessage, resultId, resultHash) {
+    if (errMessage === ignorableDeletionErrorMessage) {
+      return reply(null, resultId, resultHash);
+    }
+    reply(errMessage, resultId, resultHash);
+  });
+}
 
 exports.handler = CfnLambda({
   Create: Create,

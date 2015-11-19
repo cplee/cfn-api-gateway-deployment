@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Custom::ApiGatewayIntegrationResponse sample template",
+  "Description": "Custom::ApiGatewayDeployment sample template",
   "Parameters": {
     "RestApiCustomResourceLambdaName": {
       "Type": "String",
@@ -79,7 +79,7 @@
     },
     "DeploymentCustomResourceLambdaName": {
      "Type": "String",
-      "Default": "cfn-api-gateway-deployment-0-1-2",
+      "Default": "cfn-api-gateway-deployment-0-1-3",
       "Description": "The name of the ApiGatewayDeployment Lambda you deployed to test this stack."
     },
     "DeploymentStageName": {
