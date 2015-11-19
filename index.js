@@ -17,7 +17,7 @@ var ignorableDeletionErrorMessage = 'Active stages pointing ' +
   'to this deployment must be moved or deleted';
 
 var CfnLambda = require('cfn-lambda');
-function Delete(physcialId, params, reply) {
+function Delete(physicalId, params, reply) {
   CfnLambda.SDKAlias({
     api: APIG,
     method: 'deleteDeployment',
