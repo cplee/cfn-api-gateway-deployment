@@ -1,6 +1,6 @@
 {
   "name": "cfn-api-gateway-deployment",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "AWS CloudFormation Custom Lambda Resource | API Gateway Deployment",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/andrew-templeton/cfn-api-gateway-deployment#readme",
   "dependencies": {
-    "cfn-lambda": "0.6.1",
-    "aws4": "1.1.0"
+    "cfn-lambda": "0.8.0",
+    "aws-sdk": "2.2.19"
   }
 }

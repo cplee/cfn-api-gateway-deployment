@@ -1,23 +1,33 @@
 {
   "name": "cfn-api-gateway-deployment",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "dependencies": {
-    "aws4": {
-      "version": "1.1.0",
-      "from": "aws4@1.1.0",
-      "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.1.0.tgz",
+    "aws-sdk": {
+      "version": "2.2.19",
+      "from": "aws-sdk@2.2.19",
+      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.2.19.tgz",
       "dependencies": {
-        "lru-cache": {
-          "version": "2.7.0",
-          "from": "lru-cache@>=2.6.5 <3.0.0",
-          "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.0.tgz"
+        "sax": {
+          "version": "0.5.3",
+          "from": "sax@0.5.3",
+          "resolved": "https://registry.npmjs.org/sax/-/sax-0.5.3.tgz"
+        },
+        "xml2js": {
+          "version": "0.2.8",
+          "from": "xml2js@0.2.8",
+          "resolved": "https://registry.npmjs.org/xml2js/-/xml2js-0.2.8.tgz"
+        },
+        "xmlbuilder": {
+          "version": "0.4.2",
+          "from": "xmlbuilder@0.4.2",
+          "resolved": "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-0.4.2.tgz"
         }
       }
     },
     "cfn-lambda": {
-      "version": "0.6.1",
-      "from": "cfn-lambda@0.6.1",
-      "resolved": "https://registry.npmjs.org/cfn-lambda/-/cfn-lambda-0.6.1.tgz",
+      "version": "0.8.0",
+      "from": "cfn-lambda@0.8.0",
+      "resolved": "https://registry.npmjs.org/cfn-lambda/-/cfn-lambda-0.8.0.tgz",
       "dependencies": {
         "jayschema": {
           "version": "0.3.1",
