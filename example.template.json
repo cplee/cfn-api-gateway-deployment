@@ -10,7 +10,7 @@
     "RestApiName": {
       "Type": "String",
       "Description": "Name for the API (required). Must be unique across your account for this Region.",
-      "Default": "TestForDeployment0-3-0"
+      "Default": "TestForDeployment0-4-0"
     },
     "RestApiDescription": {
       "Type": "String",
@@ -65,7 +65,7 @@
     },
     "MethodResponseCustomResourceLambdaName": {
       "Type": "String",
-      "Default": "cfn-api-gateway-method-response-0-2-0",
+      "Default": "cfn-api-gateway-method-response-0-2-1",
       "Description": "The name of the ApiGatewayMethodResponse Lambda you deployed to test this stack."
     },
     "IntegrationCustomResourceLambdaName": {
@@ -80,14 +80,14 @@
     },
     "DeploymentCustomResourceLambdaName": {
       "Type": "String",
-      "Default": "cfn-api-gateway-deployment-0-3-0",
+      "Default": "cfn-api-gateway-deployment-0-4-0",
       "Description": "The name of the ApiGatewayDeployment Lambda you deployed to test this stack."
     },
     "DeploymentStageName": {
       "Type": "String",
       "Description": "The name of the API stage you would like to deploy",
       "AllowedPattern": "^\\w+$",
-      "Default": "deployment0_3_0"
+      "Default": "deployment0_4_0"
     },
     "DeploymentStageDescription": {
       "Type": "String",

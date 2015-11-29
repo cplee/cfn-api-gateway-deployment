@@ -91,22 +91,6 @@ function Delete(physicalId, params, reply) {
 }
 
 function NoUpdate(physicalId, params, reply) {
-  APIG.getDeployment({
-    restApiId: params.RestApiId,
-    deploymentId: physicalId
-  }, function(getErr, deployment) {
-    if (getErr) {
-      console.error('Error during NoUpdate getting ' +
-        'deployment %s from API %s: %j',
-        physicalId, params.RestApiId, getErr);
-      return reply(getErr.message);
-    }
-    console.log('During NoUpdate, was able to ' +
-      'get deployment %s from API %s: %j',
-      physicalId, params.RestApiId, deployment);
-    reply(null, deployment.id, {
-      InvokeURL: 'https://' + params.RestApiId +
-        '.execute-api.us-east-1.amazonaws.com/' + params.StageName
-    });
-  });
+  console.log('No changes to deployment, running another deploy as Create.');
+  Create(params, reply);
 }
