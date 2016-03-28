@@ -26,19 +26,24 @@ exports.handler = CfnLambda({
 });
 
 function Create(params, reply) {
-  CfnLambda.SDKAlias({
-    api: APIG,
-    method: 'createDeployment',
-    forceBools: ['CacheClusterEnabled'],
-    returnPhysicalId: 'id',
-    downcase: true,
-    returnAttrs: function() {
-      return {
-        InvokeURL: 'https://' + params.RestApiId +
-          '.execute-api.us-east-1.amazonaws.com/' + params.StageName
-      }
-    }
-  })(params, reply);
+  setTimeout(
+     function() {
+       CfnLambda.SDKAlias({
+         api: APIG,
+         method: 'createDeployment',
+         forceBools: ['CacheClusterEnabled'],
+         returnPhysicalId: 'id',
+         downcase: true,
+         returnAttrs: function() {
+           return {
+             InvokeURL: 'https://' + params.RestApiId +
+             '.execute-api.us-east-1.amazonaws.com/' + params.StageName
+           }
+         }
+       })(params, reply);
+
+     },60000
+  );
 }
 
 function Update(physicalId, params, oldParams, reply) {
