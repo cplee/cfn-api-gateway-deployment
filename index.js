@@ -4,7 +4,7 @@ var https = require('https');
 var AWS = require('aws-sdk');
 var CfnLambda = require('cfn-lambda');
 
-var APIG = new AWS.APIGateway({apiVersion: '2015-07-09'});
+var APIG = new AWS.APIGateway({apiVersion: '2015-07-09',maxRetries: 15});
 
 var ignorableDeletionErrorMessage = 'Active stages pointing ' +
   'to this deployment must be moved or deleted';
